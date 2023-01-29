@@ -1,0 +1,18 @@
+[package]
+name = "rust_lambda"
+version = "0.1.0"
+edition = "2021"
+authors = ["Kyle Melton <kyle@kyle-melton.com>"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+aws-config = "0.52"
+aws-sdk-dynamodb = "0.22"
+tokio = { version = "1", features = ["full"] }
+lambda_runtime = "0.7"
+lambda_http = "0.7"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1.0.78"
+log = "0.4.0"
+uuid = { version = "1", features = ["v4"] }

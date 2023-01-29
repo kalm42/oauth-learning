@@ -1,0 +1,28 @@
+[package]
+name = "bff_proxy"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actix-web = "4"
+actix-session = { version = "0.7.2", features = ["redis-rs-session", "redis-rs-tls-session"] }
+dotenv = "0.15.0"
+reqwest = { version = "0.11.13", features = ["json", "blocking"] }
+serde = { version = "1.0.126", features = ["derive"] }
+uuid = { version = "1.2.2", features = ["v4"] }
+tokio = { version = "1.23.0", features = ["full"] }
+
+[dependencies.prisma-client-rust]
+git = "https://github.com/Brendonovich/prisma-client-rust"
+tag = "0.6.3"
+default-features = false
+features = ["mysql"]
+
+[dependencies.cookie]
+version = "0.16"
+features = ["secure", "percent-encode"]
+
+[workspace]
+members = ["prisma-cli"]

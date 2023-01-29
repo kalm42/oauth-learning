@@ -1,0 +1,19 @@
+datasource db {
+    provider = "mysql"
+    url      = env("DATABASE_URL")
+}
+
+// -u root -p &vOK+3*DL_;F4%CSPs@1H0,60xM8r5LQ
+
+generator client {
+    // Corresponds to the cargo alias created earlier
+    provider      = "cargo prisma"
+    // The location to generate the client. Is relative to the position of the schema
+    output        = "../src/prisma.rs"
+}
+
+model User {
+    id          String  @id
+    displayName String
+    email       String  @unique
+}

@@ -1,0 +1,26 @@
+[package]
+name = "oauth_github_start"
+version = "0.1.0"
+edition = "2021"
+authors = ["Kyle Melton <kyle@kyle-melton.com>"]
+license = "MIT"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+aws-config = "^0.52"
+aws-sdk-s3 = "^0.22"
+aws-sdk-dynamodb = "^0.22"
+lambda_runtime = "^0.7"
+log = "^0.4"
+serde = { version = "^1.0", features = ["derive"] }
+serde_json = "^1.0"
+simple_logger = "^4.0"
+tracing-subscriber = { version = "^0.3", features = ["env-filter"] }
+tokio = { version = "^1.23", features = ["full"] }
+uuid = { version = "^1.2", features = ["v4"] }
+time = "^0.3"
+
+[[bin]]
+name = "bootstrap"
+path = "src/main.rs"

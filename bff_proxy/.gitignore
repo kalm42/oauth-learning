@@ -1,0 +1,10 @@
+.DS_Store
+# Environment variables
+.env
+
+# Build files
+/target
+*/target
+
+# Generated prisma file
+prisma.rs
